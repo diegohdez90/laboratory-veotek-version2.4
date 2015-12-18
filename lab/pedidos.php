@@ -183,6 +183,7 @@ echo'
 									<option value="AR-Foto">AR-FOTO</option>
 									<option value="Polarizado">POLARIZADO</option>
 									<option value="Polarizado-AR">POLARIZADO-AR</option>
+									<option value="Tinte">TINTE</option>
 								</select>
 							</div>
 						</div>

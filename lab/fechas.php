@@ -163,7 +163,7 @@ echo'
 
 
 					echo "<tr>";
-       					echo "<td rowspan='10'>";
+       					echo "<td rowspan='11'>";
        						echo "Tratamiento</td></tr>";	 
 	       			$query_tratamiento_BCO = "select count(*) as BCO from pedido where tratamiento = 'BCO' and fecha='$fecha'";
 	       			$trat_BCO = mysql_query($query_tratamiento_BCO,$con);
@@ -226,6 +226,13 @@ echo'
 	       			while ($row = mysql_fetch_array($trat_PolarizadoAR)) {
 	       				echo "<tr><td>Polarizado-AR</td><td>".$row['PolarizadoAR']."</td></tr>";
 	       				$polarizado_ar = $row['PolarizadoAR'];
+	       			}
+
+	       			$query_tratamiento_Tinte = "select count(*) as Tinte from pedido where tratamiento = 'Tinte' and fecha='$fecha'";
+	       			$trat_Tinte = mysql_query($query_tratamiento_Tinte,$con);
+	       			while ($row = mysql_fetch_array($trat_Tinte)) {
+	       				echo "<tr><td>Tinte</td><td>".$row['Tinte']."</td></tr>";
+	       				$tinte = $row['Tinte'];
 	       			}
 
 
@@ -390,7 +397,7 @@ echo'
 							<p class="text-center"><a href="seleccionar-pedido.php"><span class="glyphicon glyphicon-list-alt select" style="font-size:44px;"></span></a><br>
 	                        Modificar Pedidos</p>
 						</li>
-						<li><p class="text-center"><a href="biseles-fecha/armazon.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jorge=<?php echo $jorge; ?>"><span class="glyphicon glyphicon-stats" style="font-size:44px;"></span></a><br>Graficas</p></li>
+						<li><p class="text-center"><a href="biseles-fecha/armazon.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;tinte=<?php echo $tinte; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jorge=<?php echo $jorge; ?>"><span class="glyphicon glyphicon-stats" style="font-size:44px;"></span></a><br>Graficas</p></li>
 					</ul>
 				</div>
 				<div class="row">
